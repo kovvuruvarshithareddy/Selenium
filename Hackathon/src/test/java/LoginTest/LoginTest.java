@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
@@ -29,8 +30,9 @@ public void launchingBrowser()
 			System.setProperty("webdriver.chrome.driver", "C:\\Users\\jayanth\\Downloads\\chromedriver_win32\\chromedriver.exe");
 			driver=new ChromeDriver();
 			 driver.manage().window().maximize();
-			 driver.manage().deleteAllCookies();
+			 //driver.manage().deleteAllCookies();
 			 driver.get(prop.getProperty("url"));
+			 //driver.findElement(By.xpath("//body/div[@id='ltkpopup-container']/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]/*[1]")).click();
 			 System.out.println("Page title is : " + driver.getTitle());
 	}
 		@Test(priority=1,groups="Regression")
@@ -44,24 +46,34 @@ public void launchingBrowser()
 		 obj.enterEmail(prop.getProperty("Email"));
 		 obj.enterConformEmail(prop.getProperty("ConformEmail"));
 		 
-		 obj.enterPassword(prop.getProperty("Passwd"));
-		 obj.enterConformPassword(prop.getProperty("Conform"));
+		 obj.enterPassword(prop.getProperty("Pass"));
+		 obj.enterConformPassword(prop.getProperty("Con"));
 		 
 		 obj.clickCreateAccount();
 		}
+		
 		@Test(priority=2)
 		//@Test(enabled=false)
 			public void loginAccountDetails()  {
       BasePage bp=new BasePage(driver);
 	
 		 bp.enterEmail(prop.getProperty("Email"));
-		 bp.enterPassword(prop.getProperty("Passwd"));
+		 bp.enterPassword(prop.getProperty("Pass"));
 		 bp.clickLogout();
 		}
+		 
 		 @Test(priority=3)
+		 public void liveChatSuccessfully() throws Exception {
+		 LiveChat lc=new LiveChat(driver);
+		 lc.enterYourName(prop.getProperty("yourName"));
+		 lc.enterYourEmail(prop.getProperty("Email"));
+		 lc.clickSubmit();
+			}
+		 
+		/* @Test(priority=4)
 		 public void lightingBrowserSuccessfully() throws Exception {
 		 LightingPage lp=new LightingPage(driver);
-			}
+			}*/
 	}
 		
 	

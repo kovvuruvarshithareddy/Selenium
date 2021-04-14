@@ -17,7 +17,8 @@ public class BasePage{
 		this.driver=driver;
 		
 	     driver.findElement(By.xpath("//header/div[2]/div[4]/ul[1]/li[2]/div[1]")).click();
-         driver.findElement(By.xpath("//a[@id='my_account_hdr_link']")).click();  
+         driver.findElement(By.xpath("//a[@id='my_account_hdr_link']")).click();
+        // driver.findElement(By.xpath("//body/div[@id='ltkpopup-container']/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]/*[1]")).click();
 	     //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);  
          xls_Reader reader = new xls_Reader("C:\\Users\\jayanth\\eclipse-workspace\\Hackathon\\src\\main\\java\\com\\Excel\\lib\\util\\SampleExcel.xlsx");
 			String sheetName = "login";

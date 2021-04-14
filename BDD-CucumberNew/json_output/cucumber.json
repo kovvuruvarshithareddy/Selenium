@@ -1,0 +1,88 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 6240553800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Login.beforeScenario()"
+            }
+          }
+        ],
+        "line": 3,
+        "name": "",
+        "description": "",
+        "id": "login-website;",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "line": 5,
+            "name": "user should create an account",
+            "keyword": "Given "
+          },
+          {
+            "line": 6,
+            "name": "login to application",
+            "keyword": "When "
+          },
+          {
+            "line": 7,
+            "name": "click on submit button",
+            "keyword": "Then "
+          },
+          {
+            "line": 8,
+            "name": "user search the product",
+            "keyword": "Then "
+          },
+          {
+            "line": 9,
+            "name": "user clicks on ligthing tab",
+            "keyword": "Then "
+          },
+          {
+            "line": 10,
+            "name": "user select on Chandeliers",
+            "keyword": "Then "
+          },
+          {
+            "line": 11,
+            "name": "user selects on LargeChandeliers",
+            "keyword": "Then "
+          },
+          {
+            "line": 12,
+            "name": "user add filters and check filters",
+            "keyword": "Then "
+          },
+          {
+            "line": 13,
+            "name": "user add to cart",
+            "keyword": "Then "
+          },
+          {
+            "line": 14,
+            "name": "user click on checkout",
+            "keyword": "Then "
+          },
+          {
+            "line": 15,
+            "name": "user will logout",
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Login Website",
+    "description": "",
+    "id": "login-website",
+    "keyword": "Feature",
+    "uri": "C:/Users/jayanth/eclipse-workspace/BDD-CucumberNew/src/main/java/Feature/Login.Feature"
+  }
+]

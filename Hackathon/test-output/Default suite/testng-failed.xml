@@ -5,9 +5,7 @@
     <classes>
       <class name="LoginTest.LoginTest">
         <methods>
-          <include name="lightingBrowserSuccessfully"/>
-          <include name="createAccountDetails"/>
-          <include name="loginAccountDetails"/>
+          <include name="liveChatSuccessfully"/>
         </methods>
       </class> <!-- LoginTest.LoginTest -->
     </classes>
